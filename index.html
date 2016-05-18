@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="photoviewer/core.css" />
+<script type="text/javascript" src="jquery1.8.3.js"></script>
+<script type="text/javascript" src="photoviewer/core.js"></script>
+</head>
+<body>
+<textarea style="resize: none; width: 500px;height: 200px;">
+http://i0.sinaimg.cn/travel/2015/0507/U9385P704DT20150507151553.jpg
+https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQfDiOJ0-lDMWC1FJsyiiHhhaGhlSNL8Q96uiu6cCnYiosdAXD
+http://down.jgaoxiao.com/Uploads/down/Article/52f98c55aee6b.jpg
+http://img05.tooopen.com/images/20150420/tooopen_sy_119443558831.jpg
+</textarea>
+<br /><br />
+<button type="button" onclick="show()" >显示文本框中的图片</button>
+<script>
+	function show() {
+		var pv = PhotoViewer.getInstance("");
+		pv.show($("textarea").val().split("\n"));
+	}
+</script>
+</body>
+</html>
